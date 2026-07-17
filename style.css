@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 20px;
+    margin-top: 50px;
+}
+
+.title{
+    max-width: 500px;
+}
+
+.title p{
+    font-size: 1.3rem;
+    color:hsl(212, 6%, 44%)
+}
+
+.title p span{
+    font-weight: 700;
+    color:hsl(234, 12%, 34%)
+}
+
+.title .description{
+    font-size: 1rem;
+    margin: 20px 0 30px 0; 
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.grid-box {
+    text-align: start;
+    border-radius: 10px;
+    box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+}
+
+.grid-box-title{
+    font-weight:500;
+    color:hsl(234, 12%, 34%);
+    font-size: 1.2rem;
+    margin: 20px 0 30px 20px;
+}
+
+.grid-box-text{
+    color:hsl(234, 12%, 34%);
+    margin-left: 20px;
+    width: 80%;
+}
+.grid-box-image{
+    justify-self: end;
+    margin-top: 15px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.supervisor{
+    border-top: 5px solid hsl(180, 62%, 55%);
+}
+
+.builder{
+    border-top: 5px solid hsl(0, 78%, 62%)
+}
+
+.karma{
+    border-top: 5px solid hsl(34, 97%, 64%);
+}
+
+.calculator{
+    border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+@media(min-width:1440px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);  
+        gap: 15px;
+         align-items: center;   /* Vertical */
+        justify-items: center; /* Horizontal */
+    }
+
+    .title p:nth-child(1){
+        font-size: 2rem;
+    }
+
+    .grid-box{
+        padding-bottom: 30px;     
+        width: 90%;
+    }
+    
+
+    .supervisor{
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        align-self: center;   /* Centers vertically */
+        justify-self: center; /* Optional: centers horizontally */  
+    }
+    .calculator{
+        grid-column: 3;
+        grid-row: 1 / span 2;
+        align-self: center;   /* Centers vertically */
+        justify-self: center; /* Optional: centers horizontally */ 
+    }
+
+    .builder{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .karma{
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .grid-box-image{
+        margin-top: 15px;
+    }
+
+    .grid-box-text{
+        width: 80%;
+    }
+}
+
+
+footer{
+    margin-top: 150px;
+}
